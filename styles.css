@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-family: "Mulish", sans-serif;
+  font-size: 62.5%;
+
+  /* var */
+  --pink-text: #b52184;
+  --paragraph-text: #312d64;
+  --bg-color: #f9f4fb;
+  --bg-gradient-color: linear-gradient(134deg, #343193 0%, #302c63 100%);
+  --bg-color-white: #fff;
+  --bg-button-submit: linear-gradient(134deg, #343193 0%, #302c63 100%);
+}
+.description-page {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1.6rem;
+  padding-bottom: 9.4rem;
+  margin: auto;
+}
+.description-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.4rem;
+}
+.description-text h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  text-align: center;
+  color: var(--pink-text);
+}
+.description-text p {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--paragraph-text);
+}
+.description-text img {
+  width: 6rem;
+  height: 10.4rem;
+}
+#motivation-section {
+  background: var(--bg-gradient-color);
+}
+
+.grid-three-collumns {
+  margin: auto;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5rem;
+
+  padding: 4.8rem 4rem;
+}
+.content-grid-wrapper {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-self: center; */
+  gap: 3.2rem;
+
+  background: var(--bg-color-white);
+  border-radius: 2rem;
+
+  padding: 2.6rem;
+
+  max-width: 35rem;
+}
+.content-grid-wrapper img {
+  max-width: 8rem;
+}
+.content-grid-wrapper div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.content-grid-wrapper div h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--pink-text);
+}
+.content-grid-wrapper div p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--paragraph-text);
+}
+#contact-section {
+  background: var(--bg-color);
+}
+form {
+  padding: 7.4rem 4rem;
+  margin: auto;
+  max-width: 60rem;
+}
+form fieldset {
+  border: none;
+}
+form fieldset legend {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--pink-text);
+  margin-bottom: 4.2rem;
+}
+.sr-only {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+form fieldset input {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  color: var(--paragraph-text);
+  font-weight: 600;
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--paragraph-text);
+
+  padding: 1.2rem 1.6rem 1.2rem 4.8rem;
+
+  width: 100%;
+  margin-bottom: 2.4rem;
+  display: flex;
+}
+form fieldset textarea {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.6rem;
+  color: var(--paragraph-text);
+  font-weight: 600;
+
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--paragraph-text);
+  width: 100%;
+  padding: 1.2rem 1.6rem 1.6rem 1.6rem;
+  min-height: 12.6rem;
+}
+
+input[type="text"] {
+  background-image: url(./assets/person.png);
+  background-repeat: no-repeat;
+  background-position: center left 1.4rem;
+  background-size: 2.4rem;
+}
+input[type="email"] {
+  background-image: url(./assets/at.svg);
+  background-repeat: no-repeat;
+  background-position: center left 1.4rem;
+  background-size: 2.4rem;
+}
+
+#form-submit {
+  background: var(--bg-button-submit);
+  font-family: "Mulish", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  color: var(--bg-color-white);
+
+  border-radius: 1.6rem;
+
+  margin-top: 2.4rem;
+  padding: 1.6rem;
+}
+
+@media (min-width: 800px) {
+  .description-page {
+    flex-direction: row;
+    gap: 2.8rem;
+    max-width: 144rem;
+  }
+  .description-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 18rem;
+    margin-top: 32rem;
+    margin-left: 11rem;
+  }
+  .description-text h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    text-align: start;
+  }
+  .description-text p {
+    font-size: 3.2rem;
+    font-weight: 600;
+    text-align: start;
+  }
+  .grid-three-collumns {
+    max-width: 144rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: none;
+    gap: 6rem;
+
+    padding: 6.4rem 11rem;
+  }
+  .content-grid-wrapper {
+    gap: 4rem;
+
+    padding: 3.2rem;
+
+    max-width: 36.6rem;
+  }
+  .content-grid-wrapper img {
+    max-width: 9.7rem;
+  }
+  .content-grid-wrapper div {
+    gap: 2.4rem;
+  }
+  .content-grid-wrapper div h2 {
+    font-size: 3.4rem;
+  }
+  .content-grid-wrapper div p {
+    font-size: 1.8rem;
+  }
+}
